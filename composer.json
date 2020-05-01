@@ -1,0 +1,13 @@
+{
+    "require": {
+        "fzaninotto/faker": "^1.9",
+        "ramsey/uuid": "^3.9",
+        "phpoffice/phpspreadsheet": "^1.11",
+        "dompdf/dompdf": "^0.8.5",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+        "doctrine/dbal": "^2",
+        "ramsey/uuid-doctrine": "^1.6"
+    }
+}
