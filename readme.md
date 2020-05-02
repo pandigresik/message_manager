@@ -25,12 +25,14 @@ Application can generate message based template master, support send to whatsapp
 
 - [x] Clone/Download repository `git clone https://github.com/pandigresik/message_manager.git` dan pindah ke folder `message_manager`
 - [x] Jalankan [Composer](https://getcomposer.org/download) Install/Update `composer update`
-- [x] Create folder **uploads/imageMessages** in message_manager folder and set permission to can writeable
-- [x] set connection setting, rename application/config/database.example.php to application/config/database.php
-- [x] set config setting, rename application/config/config.example.php to application/config/config.php
-- [x] Setup koneksi database pada config/database.php
-- [x] Jalankan perintah `php -S <HOST>:<PORT>` untuk mengaktifkan web server local ( kebutuhan development )
-- [x] Buka halaman `<HOST>:<PORT>/`
+- [x] Create folder **uploads/imageMessages** in **message_manager** folder and set permission to can writeable
+- [x] set connection setting, rename **application/config/database.example.php** to **application/config/database.php**
+- [x] set config setting, rename **application/config/config.example.php** to **application/config/config.php**
+- [x] set your token from wablas provider or else, rename **application/config/serverws.example.php** to **application/config/serverws.php**
+- [x] Setup your connection database setting in **config/database.php**
+- [x] We must doing migration and seed to generate table and seed default data, open cmd / terminal on current directory then execute command **php index.php tools migrate** , if there is not error we must execute command **php index.php tools seed** for seeding data process
+- [x] Execute command `php -S <HOST>:<PORT>` to activate web server built in ( development mode), we can skip this process if we use web server like apache , nginx or else.
+- [x] Open in browser `<HOST>:<PORT>/`
 
 ## Kontributor
 
