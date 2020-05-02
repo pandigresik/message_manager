@@ -1,6 +1,7 @@
 /application/cache/*
 /application/logs
 /application/config/database.php
+/application/config/serverws.php
 /application/config/config.php
 /vendor
 /uploads

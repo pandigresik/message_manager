@@ -114,7 +114,7 @@ class SendMessage extends MY_Controller {
             yield $client->requestAsync('POST',$urlPost,$dataPost)
                 ->then(function (Response $response) use ($idMessage) {								
                     //log_message('error',$response->getBody()->getContents());
-                    //$html['data'] = $response->getBody()->getContents();     
+                    $html['data'] = $response->getBody()->getContents();     
                     $html['id'] = $idMessage;           
                     return $html;
                 });
@@ -124,7 +124,7 @@ class SendMessage extends MY_Controller {
         return new EachPromise($promises, [
             'concurrency' => 10,
             'fulfilled' => function (array $html) {
-                //log_message('error',json_encode($html));
+                log_message('error',json_encode($html['data']));
                 $this->model->update($html['id'],['send_status' => 1, 'updated_at' => date('Y-m-d H:i:s')]);
                 $this->successSend++;
             },
